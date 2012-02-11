@@ -1,106 +1,96 @@
 /* Mono by Christopher Lobay is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/3.0/ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA. */
 
 body, html {
-	text-rendering: optimizeLegibility;
-	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-}
-
-body:hover {
-	-webkit-transition: all 0.3s ease;
-	opacity: 1 !important;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 @-webkit-keyframes notification-wrapper {
-	0%   { opacity: 0; -webkit-transform: translate3d( 40px, 0, 0 ); }
-	100% { opacity: 1; -webkit-transform: translate3d( 0,    0, 0 ); }
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 @-webkit-keyframes other {
-	0%   { -webkit-transform: translate3d( 20px, 0, 0 ); }
-	100% { -webkit-transform: translate3d( 0, 0, 0 ); }
-}
-
-@-webkit-keyframes icon {
-	0%   { opacity: 0; -webkit-transform: translate3d( 0, 5px, 0 ); }
-	100% { opacity: 1; -webkit-transform: translate3d( 0, 0, 0 ); }
+  0%   { -webkit-transform: scale(1.1); }
+  100% { -webkit-transform: scale(1); }
 }
 
 .wrapper {
-	width: 300px;
-	overflow: hidden;
-	position: absolute;
-	top: 1px;
-	left: 15px;
+  width: 300px;
+  overflow: hidden;
+  position: absolute;
+  top: 1px;
+  left: 15px;
+  padding: 6px;
 }
 
 .notification {
-	-webkit-transition: all 0.5s ease;
-	-webkit-animation: notification-wrapper 0.7s ease;
-	-webkit-box-sizing: border-box;
-	border-radius: 5px;
-	background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(rgba(0,0,0,.95)), to(rgba(0,0,0,0.9)));
-	position: relative;
-	float: left;
-	width: 300px;
+  -webkit-transition: all 0.5s ease;
+  -webkit-animation: notification-wrapper 0.7s ease;
+  -webkit-box-sizing: border-box;
+  -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.8);
+  border-radius: 4px;
+  background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(rgba(0,0,0,.95)), to(rgba(0,0,0,0.9)));
+  position: relative;
+  float: left;
+  width: 300px;
+  min-height: 60px;
 }
 
 .border {
-	border-radius: 4px;
-	-webkit-box-shadow: inset 0px 1px 0px rgba(255,255,255,0.4);
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255,255,255,0.20)), to(rgba(255,255,255,0)));
-	margin: 1px;
-	padding: 10px 9px 10px 65px;
-	-webkit-box-sizing: border-box;
-	min-height: 52px;
-	clear: both;
-	overflow: hidden;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0px 1px 0px rgba(255,255,255,0.4);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255,255,255,0.20)), to(rgba(255,255,255,0)));
+  margin: 1px;
+  padding: 10px 9px 10px 65px;
+  -webkit-box-sizing: border-box;
+  min-height: 52px;
+  clear: both;
+  overflow: hidden;
 }
 
 .divider {
-	position: absolute;
-	top: 10px;
-	left: 1px;
-	bottom: 10px;
-	width: 54px;
-	border-right: 1px solid rgba(255,255,255,0.1);
-	-webkit-box-shadow: inset -1px 0px 0px rgba(0,0,0,0.6);
-	-webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)), color-stop(50%, rgba(0,0,0,1)), to(rgba(0,0,0,0)));
-	-webkit-animation: other 0.4s ease;
+  position: absolute;
+  top: 10px;
+  left: 1px;
+  bottom: 10px;
+  width: 54px;
+  border-right: 1px solid rgba(255,255,255,0.1);
+  -webkit-box-shadow: inset -1px 0px 0px rgba(0,0,0,0.6);
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)), color-stop(50%, rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+  -webkit-animation: other 0.4s ease;
 }
 
 img {
-	position: absolute;
-	display: block;
-	height: 34px;
-	width: 34px;
-	top: 10px;
-	left: 10px;
-	border-radius: 3px;
-	-webkit-animation: icon 0.8s ease;
+  position: absolute;
+  display: block;
+  height: 34px;
+  width: 34px;
+  top: 14px;
+  left: 10px;
+  border-radius: 3px;
 }
 
 h1,p {
-	color: #FFF;
-	line-height: 15px;
-	margin: 0; padding: 0;
-	clear: both;
-	overflow: hidden;
-	text-shadow: 0px -1px 1px rgba(0,0,0,0.8);
-	-webkit-font-smoothing: subpixel-antialiased;
+  color: #FFF;
+  line-height: 15px;
+  margin: 0; padding: 0;
+  clear: both;
+  overflow: hidden;
+  text-shadow: 0px -1px 1px rgba(0,0,0,0.8);
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 h1 {
-	-webkit-animation: other 0.6s ease;
-	font-size: 10pt;
-	margin: 0 0 2px 0;
-	text-shadow: 0px -1px 1px rgba(0,0,0,0.8);
-	overflow: visible;
+  -webkit-animation: other 0.6s ease;
+  font-size: 10pt;
+  margin: 0 0 4px 0;
+  text-shadow: 0px -1px 1px rgba(0,0,0,0.8);
+  overflow: visible;
 }
 
 p {
-	-webkit-animation: other 0.8s ease;
-	font-family: Lucida Grande, sans-serif;
-	font-size: 8pt;
-	color: #999;
-	overflow: visible;
+  -webkit-animation: other 0.8s ease;
+  font-size: 8pt;
+  color: #ccc;
+  overflow: visible;
 }
