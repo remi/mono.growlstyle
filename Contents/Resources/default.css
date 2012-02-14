@@ -4,12 +4,12 @@ body, html {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-@-webkit-keyframes notification-wrapper {
+@-webkit-keyframes opacity {
   0%   { opacity: 0; }
   100% { opacity: 1; }
 }
 
-@-webkit-keyframes other {
+@-webkit-keyframes scale {
   0%   { -webkit-transform: scale(1.1); }
   100% { -webkit-transform: scale(1); }
 }
@@ -25,11 +25,11 @@ body, html {
 
 .notification {
   -webkit-transition: all 0.5s ease;
-  -webkit-animation: notification-wrapper 0.7s ease;
+  -webkit-animation: opacity 0.7s ease;
   -webkit-box-sizing: border-box;
   -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.8);
   border-radius: 4px;
-  background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(rgba(0,0,0,.95)), to(rgba(0,0,0,0.9)));
+  background: rgba(0,0,0,0.96);
   position: relative;
   float: left;
   width: 300px;
@@ -57,7 +57,6 @@ body, html {
   border-right: 1px solid rgba(255,255,255,0.1);
   -webkit-box-shadow: inset -1px 0px 0px rgba(0,0,0,0.6);
   -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)), color-stop(50%, rgba(0,0,0,1)), to(rgba(0,0,0,0)));
-  -webkit-animation: other 0.4s ease;
 }
 
 img {
@@ -67,7 +66,7 @@ img {
   width: 34px;
   top: 14px;
   left: 10px;
-  border-radius: 3px;
+  -webkit-animation: scale 0.8s ease;
 }
 
 h1,p {
@@ -77,11 +76,11 @@ h1,p {
   clear: both;
   overflow: hidden;
   text-shadow: 0px -1px 1px rgba(0,0,0,0.8);
-  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1 {
-  -webkit-animation: other 0.6s ease;
+  -webkit-animation: scale 0.6s ease;
   font-size: 10pt;
   margin: 0 0 4px 0;
   text-shadow: 0px -1px 1px rgba(0,0,0,0.8);
@@ -89,7 +88,7 @@ h1 {
 }
 
 p {
-  -webkit-animation: other 0.8s ease;
+  -webkit-animation: scale 0.8s ease;
   font-size: 8pt;
   color: #ccc;
   overflow: visible;
